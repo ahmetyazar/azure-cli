@@ -44,6 +44,9 @@ az ml compute create --name ${COMPUTE_INSTANCE} --size STANDARD_DS11_V2 --type C
 # echo "Install the Azure Machine Learning extension"
 # az extension add -n ml -y
 
+# create scikit-learn environment
+az ml environment create --file "docker-conda-env.yml"
+
 # submit an Azure Machine Learning job
 # echo "Submit job"
 # az ml job create --file ./src/job.yml
