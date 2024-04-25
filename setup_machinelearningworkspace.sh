@@ -47,6 +47,9 @@ az ml compute create --name ${COMPUTE_INSTANCE} --size STANDARD_DS11_V2 --type C
 # create scikit-learn environment
 az ml environment create --file "docker-conda-env.yml"
 
+# create data asset 
+az ml data create --type uri_file --name "diabetes-csv" --path  "./data/diabetes.csv"
+
 # submit an Azure Machine Learning job
 # echo "Submit job"
 # az ml job create --file ./src/job.yml
