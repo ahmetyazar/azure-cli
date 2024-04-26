@@ -4,7 +4,7 @@ sampling_algorithm: grid
 trial:
   code: src
   command: >-
-    python main.py
+    python main-sweep.py
     --diabetes-csv ${{inputs.diabetes}} 
     --learning-rate ${{search_space.learning_rate}}
     --n-estimators ${{search_space.n_estimators}}
