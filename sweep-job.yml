@@ -5,7 +5,7 @@ trial:
   code: 
     local_path: src
   command: >-
-    python main.py
+    python main-sweep.py
     --learning-rate ${{search_space.learning_rate}}
   environment: azureml:basic-env-scikit:1
 inputs:
