@@ -49,7 +49,7 @@ az ml environment create --file "docker-conda-env.yml"
 
 # create data asset 
 # az ml data create --type uri_file --name "diabetes-csv" --path  "./data/diabetes.csv"
-az ml data create --file data-local-path.yml
+az ml data create --file data-localpath.yml
 
 # submit an Azure Machine Learning job
 # echo "Submit job"
