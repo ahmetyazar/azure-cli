@@ -55,6 +55,9 @@ az ml data create --file data-localpath.yml
 # echo "Submit job"
 # az ml job create --file ./src/job.yml
 
+# create service principal
+# az ad sp create-for-rbac --name "sp-yazar1" --role contributor  --scopes /subscriptions/d4ada6b9-9bf9-4076-b7ec-3ab76d1b0cf8/resourceGroups/rg-dp100-l91c18a722d864a2188                               --sdk-auth
+
 
 
 # After all the resources are created, launch ML Studio, open the terminal of the compute instance and type:
