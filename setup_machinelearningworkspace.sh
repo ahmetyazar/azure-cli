@@ -30,11 +30,11 @@ az configure --defaults workspace=$WORKSPACE_NAME
 # Create compute instance
 echo "Creating a compute instance with name: " $COMPUTE_INSTANCE
 #az ml compute create --name ${COMPUTE_INSTANCE} --size STANDARD_DS11_V2 --type ComputeInstance 
-az ml compute create --name ${COMPUTE_INSTANCE} --size STANDARD_DS11_V2 --type ComputeInstance
+#az ml compute create --name ${COMPUTE_INSTANCE} --size STANDARD_DS11_V2 --type ComputeInstance
 
 # Create compute cluster
-# echo "Creating a compute cluster with name: " $COMPUTE_CLUSTER
-# az ml compute create --name ${COMPUTE_CLUSTER} --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute 
+echo "Creating a compute cluster with name: " $COMPUTE_CLUSTER
+az ml compute create --name ${COMPUTE_CLUSTER} --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute 
 
 # Create data assets
 # echo "Create training data asset:"
@@ -49,7 +49,7 @@ az ml environment create --file "docker-conda-env.yml"
 
 # create data asset 
 # az ml data create --type uri_file --name "diabetes-csv" --path  "./data/diabetes.csv"
-az ml data create --file data-localpath.yml
+# az ml data create --file data-localpath.yml
 
 # submit an Azure Machine Learning job
 # echo "Submit job"
